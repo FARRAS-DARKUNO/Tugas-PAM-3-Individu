@@ -26,8 +26,17 @@ const CheckOut = ({navigation}) => {
                 </View> 
                 <View style={styles.marginMain}>
                     <Card>
-                        <View>
-                        <Text style={styles.textSubtittle}>Hasil Pencarian Penerbangan</Text>
+                        <View style={styles.viewCard}>
+                            <View style={styles.viewImage}>
+                                <Text>AWAL</Text>
+                            </View>
+                            <Text>TUJUAN</Text>
+                        </View>
+                        <View style={styles.viewCard}>
+                            <View style={styles.viewImage}>
+                                 <Image source={require('../images/garuda.png')} style={{ width: 40, height: 40 }}/>
+                            </View>
+                            <Text>NAMA MASKAPAI</Text>
                         </View>
                     </Card>
                 </View>              

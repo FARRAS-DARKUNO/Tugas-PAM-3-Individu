@@ -26,7 +26,13 @@ const styles = StyleSheet.create({
     marginMain:{
         marginVertical: 20,
         marginHorizontal: 10,
-    }
-    
+    },
+    viewCard:{
+        flexDirection: "row",
+        padding: 10,
+    },
+    viewImage:{
+        flex: 1,
+    },
 });
 export default styles;
