@@ -57,7 +57,8 @@ const styles = StyleSheet.create({
         alignItems:'center',
         justifyContent:'center',
         margin: 40,
-    }
+    },
+    
 });
 
 export default styles;

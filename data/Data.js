@@ -27,7 +27,7 @@ const BANDARA = [
      },
      {
        bandara_id: 'B03',
-       bandara_nama: 'Juanda',
+       bandara_nama: 'Depati Ammir',
      },
 ];
 

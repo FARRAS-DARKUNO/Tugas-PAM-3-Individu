@@ -12,9 +12,18 @@ import { Icon } from 'react-native-elements';
 
 const Home = ({navigation}) => {
 
-    const [textKeberangkatan, onChangeKeberangkatan] = React.useState(null);
-    const [textTujuan, onChangeTujuan] = React.useState(null);
-    const [textWaktu, onChangeWaktu] = React.useState(null);
+    const [textKeberangkatan, onChangeKeberangkatan] = React.useState('');
+    const [textTujuan, onChangeTujuan] = React.useState('');
+    const [textWaktu, onChangeWaktu] = React.useState('');
+
+    const register = () =>{
+        navigation.navigate('CheckOut',{
+            keberangkatan : textKeberangkatan,
+            tujuan : textTujuan,
+            waktu: textWaktu,
+        })
+    }
+
     return (
         <SafeAreaView >
             <ScrollView>
@@ -32,24 +41,24 @@ const Home = ({navigation}) => {
                            <Text style={styles.textSubtittle}>Lokasi Keberangkatan</Text>
                            <TextInput 
                                style={styles.textInput}
-                               onChangeText={onChangeKeberangkatan}
+                               onChangeText= {(text) => onChangeKeberangkatan(text)}
                                value={textKeberangkatan}
                                placeholder="Tulis..."/>
                             <Text style={styles.textSubtittle}>Lokasi Tujuan</Text>
                             <TextInput 
                                 style={styles.textInput}
-                                onChangeText={onChangeTujuan}
+                                onChangeText= {(text) => onChangeTujuan(text)}
                                 value={textTujuan}
                                 placeholder="Tulis..."/>
                             <Text style={styles.textSubtittle}>Waktu Keberangkatan</Text>
                             <TextInput 
                                 style={styles.textInput}
-                                onChangeText={onChangeWaktu}
+                                onChangeText= {(text) => onChangeWaktu(text)}
                                 value={textWaktu}
-                                placeholder="DD-MM-YY"/>
+                                placeholder="YYYY-MM-DD"/>
                             <Button
                                 title="Cari"
-                                //onPress={() => Alert.alert('Simple Button pressed')}
+                                onPress={register}
                                 />
                        </View>
                    </View>
